@@ -5,7 +5,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-def REPO_URL = 'https://github.com/tiiuae/ci-test-automation/'
+def REPO_URL = 'https://github.com/milva-unikie/ci-test-automation/'
 def DEF_LABEL = 'testagent'
 def TMP_IMG_DIR = 'image'
 def TMP_SIG_DIR = 'signature'
@@ -82,7 +82,7 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout scmGit(
-          branches: [[name: 'main']],
+          branches: [[name: 'cosmic']],
           extensions: [[$class: 'WipeWorkspace']],
           userRemoteConfigs: [[url: REPO_URL]]
         )

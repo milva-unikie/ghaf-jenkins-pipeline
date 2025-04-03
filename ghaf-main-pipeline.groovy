@@ -5,7 +5,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-def REPO_URL = 'https://github.com/tiiuae/ghaf/'
+def REPO_URL = 'https://github.com/kajusnau/ghaf/'
 def WORKDIR  = 'ghaf'
 
 // Utils module will be loaded in the first pipeline stage
@@ -95,7 +95,7 @@ pipeline {
         script { utils = load "utils.groovy" }
         dir(WORKDIR) {
           checkout scmGit(
-            branches: [[name: 'main']],
+            branches: [[name: 'cosmic']],
             extensions: [[$class: 'WipeWorkspace']],
             userRemoteConfigs: [[url: REPO_URL]]
           )
